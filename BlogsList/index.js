@@ -41,3 +41,5 @@ class BlogsList extends Component {
       </div>
     )
   }
+
+export default BlogList
