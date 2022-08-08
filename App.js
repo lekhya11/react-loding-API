@@ -1,5 +1,7 @@
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
+import BlogItemDetails from './components/BlogItemDetails'
+
 import Header from './components/Header'
 import About from './components/About'
 import Contact from './components/Contact'
@@ -13,8 +15,9 @@ const App = () => (
     <Header />
     <Switch>
       <Route exact path="/" component={BlogsList} />
-      <Route path="/about" component={About} />
-      <Route path="/contact" component={Contact} />
+      <Route exact path="/about" component={About} />
+      <Route exact path="/contact" component={Contact} />
+      <Route path="/blogs/:id" component={BlogItemDetails} />
       <Route component={NotFound} />
     </Switch>
   </BrowserRouter>
